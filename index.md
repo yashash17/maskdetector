@@ -81,6 +81,6 @@ This approach involves 2 steps. Mask detection heavily relies upon facial recogn
 
 ## Project Materials
 
-[Presentation Slides](https://docs.google.com/presentation/d/1tHrjfLkF4Yh1GGjKZIgwefWncm7stNi3qUd1Km8lJpM/edit?usp=sharing)
-[Presentation Video]()
-[Source Code on Github]()
+- [Presentation Slides](https://docs.google.com/presentation/d/1tHrjfLkF4Yh1GGjKZIgwefWncm7stNi3qUd1Km8lJpM/edit?usp=sharing)
+- [Presentation Video]()
+- [Source Code on Github]()
