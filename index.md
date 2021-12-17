@@ -50,7 +50,7 @@ Images are then resized to 224x224 pixels each. Data is then segmented into trai
 Tensorflow's MobileNetV2 library is used as the starting point as our base CNN. Post construction of the head of the model, layers such as AveragePooling2D, Flatten and Dense and Dropout are added in a logical manner. The head of the model is then fitted onto the base model. Using the Adam Optimizer to compile it, we then serialize the model to our disk to be used in the scripts created to detect masks in images and videos. 
 The accuracy of the model is then tested on the part of our data labeled as _test_. Using multiple epochs, batch sizes and a fixed learning rate, the model is found to be ~99% accurate on our test data. 
 
-**Result**
+**Model Accuracy**
 
 ![image](https://user-images.githubusercontent.com/47380917/146493010-22ed9f22-0995-4d53-bf37-82e62d5eab95.png)
 
@@ -64,5 +64,5 @@ The accuracy of the model is then tested on the part of our data labeled as _tes
 
 **Real-time Video Stream**
 
-[Link To Video][https://drive.google.com/file/d/19-0osIFTxZilyt6LqVfiZTmvJ4zos2bs/view]
+[Link To Video](https://drive.google.com/file/d/19-0osIFTxZilyt6LqVfiZTmvJ4zos2bs/view)
 
