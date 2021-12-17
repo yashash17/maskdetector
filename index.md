@@ -9,6 +9,9 @@ Develop a system that accurately detects the presence of a mask on multiple face
 ### Current state-of-the-art
 
 1. For static images
+Current algorithms first perform facial recognition and then use a sophisticated R-CNN (Convolutional Neural Network) model to detect the presence of a mask once a face is successfully detected. 
+2. For real-time video streams
+The process is esentially the same with additional complexities. The algorithm first identifies multiple frames of the same person using facial recognition. It then uses a similar R-CNN model to detect the presence of masks in each frame. The resultant classification for each frame at any given time is computed as an average result of the previous immediate frames. Multiple frames reduce the possibility of false-classification if facial recognition fails due to multiple reasons (unclear video, face being too obscured etc.)
 
 Current algorithms first perform facial recognition and then use a sophisticated R-CNN (Convolutional Neural Network) model to detect the presence of a mask once a face is successfully detected. 
 
