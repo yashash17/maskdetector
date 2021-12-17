@@ -22,8 +22,6 @@ Current algorithms first perform facial recognition and then use a sophisticated
 
 The process is esentially the same with additional complexities. The algorithm first identifies multiple frames of the same person using facial recognition. It then uses a similar R-CNN model to detect the presence of masks in each frame. The resultant classification for each frame at any given time is computed as an average result of the previous immediate frames. Multiple frames reduce the possibility of false-classification if facial recognition fails due to multiple reasons (unclear video, face being too obscured etc.)
 
-https://tryolabs.com/blog/2020/07/09/face-mask-detection-in-street-camera-video-streams-using-ai-behind-the-curtain
-
 ## Development Steps and Timeline of Project
 
 - **November 30th**: Find dataset online and train model on the same
@@ -82,5 +80,13 @@ This approach involves 2 steps. Mask detection heavily relies upon facial recogn
 ## Project Materials
 
 - [Presentation Slides](https://docs.google.com/presentation/d/1tHrjfLkF4Yh1GGjKZIgwefWncm7stNi3qUd1Km8lJpM/edit?usp=sharing)
-- [Presentation Video]()
-- [Source Code on Github]()
+- [Source Code on Github](https://github.com/yashash17/maskdetector)
+
+## Resources
+
+- https://github.com/prajnasb/observations/tree/master/experiements/data
+- https://tryolabs.com/blog/2020/07/09/face-mask-detection-in-street-camera-video-streams-using-ai-behind-the-curtain
+- https://keras.io/api/layers/reshaping_layers/flatten/
+- https://keras.io/api/optimizers/
+- https://www.pyimagesearch.com/2020/05/04/covid-19-face-mask-detector-with-opencv-keras-tensorflow-and-deep-learning/
+- https://towardsdatascience.com/creating-a-powerful-covid-19-mask-detection-tool-with-pytorch-d961b31dcd45
