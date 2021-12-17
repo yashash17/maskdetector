@@ -34,24 +34,35 @@ https://tryolabs.com/blog/2020/07/09/face-mask-detection-in-street-camera-video-
 
 ## Technical Approach & Implementation
 
-**Preprocessing and Partioning Dataset**
+### Preprocessing and Partioning Dataset
 
 The dataset was found online on github. It was created by taking randomized images of faces without a mask, and then applying a mask to the face by using a custom python script (using facial landmarks to compute mask placement).
 Images are then resized to 224x224 pixels each. Data is then segmented into training and test data along with appropriate labels -- mask, without_mask. 
 
-Dataset images: 
+**Example Data** 
 
 ![image](https://user-images.githubusercontent.com/47380917/146492299-ded2f308-19ab-438b-a702-f93451638965.png)
 
 ![image](https://user-images.githubusercontent.com/47380917/146492321-e953f5dd-eaf3-4259-a001-73810475651e.png)
 
-**Building and Training Model**
+### Building and Training Model
 
 Tensorflow's MobileNetV2 library is used as the starting point as our base CNN. Post construction of the head of the model, layers such as AveragePooling2D, Flatten and Dense and Dropout are added in a logical manner. The head of the model is then fitted onto the base model. Using the Adam Optimizer to compile it, we then serialize the model to our disk to be used in the scripts created to detect masks in images and videos. 
 The accuracy of the model is then tested on the part of our data labeled as _test_. Using multiple epochs, batch sizes and a fixed learning rate, the model is found to be ~99% accurate on our test data. 
 
-Result:
+**Result**
 
 ![image](https://user-images.githubusercontent.com/47380917/146493010-22ed9f22-0995-4d53-bf37-82e62d5eab95.png)
 
-**Results**
+### Results
+
+**Static Images**
+
+![image](https://user-images.githubusercontent.com/47380917/146493439-ff2fbc8a-dd2c-4faf-8076-53dcecfb773f.png)
+
+![image](https://user-images.githubusercontent.com/47380917/146493443-212ebc70-861d-47ea-96f2-04af0fe9a664.png)
+
+**Real-time Video Stream**
+
+[Link To Video][https://drive.google.com/file/d/19-0osIFTxZilyt6LqVfiZTmvJ4zos2bs/view]
+
