@@ -66,3 +66,21 @@ The accuracy of the model is then tested on the part of our data labeled as _tes
 
 [Link To Video](https://drive.google.com/file/d/19-0osIFTxZilyt6LqVfiZTmvJ4zos2bs/view)
 
+After analyzing our results, we can see that the model works well with multiple people in one static image - one without a mask and one without. It also works well on the side-profile image of a person found on the internet. The results on video, while accurate to some extent, can be bettered. The detector takes some time to analyze the face and change results if a person moves too quick or changes positions quicker. I assume that the multiple frame approach outlined in the current state-of-the-art section would work well in such cases. A green box on the face implies the presence of a mask while a red on implies the absence of one. The results are fairly intuitive and can be gauged from just glancing at the video-stream or static images. 
+
+## Problems Encountered
+
+This approach involves 2 steps. Mask detection heavily relies upon facial recognition. Due to this, there are some cases wherein the mask cannot be detected. For example, if there is low camera-quality that blurs a face or if the face is too obscured by a mask or other object and the Region of Interest (ROI) cannot be accurately located. I was also new to **keras** and **tensorflow** and had to research a fair amount on how to create an efficient model using these machine-learning libraries
+
+## Learnings and Future Work
+
+- Realization that mask detection in videos is more complex than it seems
+- If there is a way to detect the presence of mask by bypassing the facial recognition stage, this would be an ideal approach
+- Given the current scenario with COVID-19 and threat of future pandemics, the application of such a system is of key importance
+- If implemented well, multiple entities can use this technology to limit the spread of COVID-19
+
+## Project Materials
+
+[Presentation Slides](https://docs.google.com/presentation/d/1tHrjfLkF4Yh1GGjKZIgwefWncm7stNi3qUd1Km8lJpM/edit?usp=sharing)
+[Presentation Video]()
+[Source Code on Github]()
